@@ -1,0 +1,58 @@
+"0","library(jsonlite)"
+"0","library(dplyr)"
+"0","#fromjson()"
+"0","#inner_join()"
+"0",""
+"0","library(readr)"
+"0","X103_slalry_education <- read_csv(""103 slalry education.csv"")"
+"2","Parsed with column specification:
+cols(
+  ¦~«× = [32mcol_double()[39m,
+  ¤jÂ¾·~§O = [31mcol_character()[39m,
+  `¸g±`©ÊÁ~¸ê-Á~¸ê` = [32mcol_double()[39m,
+  `¸g±`©ÊÁ~¸ê-¤k/¨k` = [32mcol_double()[39m,
+  `°ê¤¤¤Î¥H¤U-Á~¸ê` = [31mcol_character()[39m,
+  `°ê¤¤¤Î¥H¤U-¤k/¨k` = [31mcol_character()[39m,
+  `°ª¤¤©Î°ªÂ¾-Á~¸ê` = [31mcol_character()[39m,
+  `°ª¤¤©Î°ªÂ¾-¤k/¨k` = [31mcol_character()[39m,
+  `±M¬ì-Á~¸ê` = [31mcol_character()[39m,
+  `±M¬ì-¤k/¨k` = [31mcol_character()[39m,
+  `¤j¾Ç-Á~¸ê` = [31mcol_character()[39m,
+  `¤j¾Ç-¤k/¨k` = [31mcol_character()[39m,
+  `¬ã¨s©Ò¤Î¥H¤W-Á~¸ê` = [31mcol_character()[39m,
+  `¬ã¨s©Ò¤Î¥H¤W-¤k/¨k` = [31mcol_character()[39m
+)
+"
+"0","X106_slalry_education <- read_csv(""106 slalry education.csv"")"
+"2","Parsed with column specification:
+cols(
+  ¦~«× = [32mcol_double()[39m,
+  ¤jÂ¾·~§O = [31mcol_character()[39m,
+  `¸g±`©ÊÁ~¸ê-Á~¸ê` = [32mcol_double()[39m,
+  `¸g±`©ÊÁ~¸ê-¤k/¨k` = [31mcol_character()[39m,
+  `°ê¤¤¤Î¥H¤U-Á~¸ê` = [31mcol_character()[39m,
+  `°ê¤¤¤Î¥H¤U-¤k/¨k` = [31mcol_character()[39m,
+  `°ª¤¤©Î°ªÂ¾-Á~¸ê` = [31mcol_character()[39m,
+  `°ª¤¤©Î°ªÂ¾-¤k/¨k` = [31mcol_character()[39m,
+  `±M¬ì-Á~¸ê` = [31mcol_character()[39m,
+  `±M¬ì-¤k/¨k` = [31mcol_character()[39m,
+  `¤j¾Ç-Á~¸ê` = [31mcol_character()[39m,
+  `¤j¾Ç-¤k/¨k` = [31mcol_character()[39m,
+  `¬ã¨s©Ò¤Î¥H¤W-Á~¸ê` = [31mcol_character()[39m,
+  `¬ã¨s©Ò¤Î¥H¤W-¤k/¨k` = [31mcol_character()[39m
+)
+"
+"0","X106_slalry_education$å¤§è·æ¥­åˆ¥<- gsub(""_"",""ã€"",X106_slalry_education$å¤§è·æ¥­åˆ¥)"
+"0",""
+"0",""
+"0","X103_106_slalry_education <- inner_join(X103_slalry_education,X106_slalry_education,by=""å¤§è·æ¥­åˆ¥"")"
+"0",""
+"0","X103_106_slalry_education$`å¤§å­¸-è–ªè³‡.x`<- gsub(""â€”"",0,X103_106_slalry_education$`å¤§å­¸-è–ªè³‡.x`)"
+"0",""
+"0","X103_106_slalry_education$`å¤§å­¸-è–ªè³‡.y`<- gsub(""â€”"",0,X103_106_slalry_education$`å¤§å­¸-è–ªè³‡.y`)"
+"0",""
+"0","X103_106_slalry_education$`å¤§å­¸-è–ªè³‡.x`<- as.numeric(X103_106_slalry_education$`å¤§å­¸-è–ªè³‡.x`)"
+"0",""
+"0","X103_106_slalry_education$`å¤§å­¸-è–ªè³‡.y`<- as.numeric(X103_106_slalry_education$`å¤§å­¸-è–ªè³‡.y`)"
+"0",""
+"0",""
